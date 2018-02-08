@@ -21,7 +21,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="OpenRealEstate.Core" Version="6.0.0-dev" />
+    <PackageReference Include="OpenRealEstate.Core" Version="7.0.0-dev" />
     <PackageReference Include="OpenRealEstate.FakeData" Version="5.0.0-dev" />
     <PackageReference Include="Shouldly" Version="3.0.0" />
     <PackageReference Include="xunit.core" Version="2.3.1" />
