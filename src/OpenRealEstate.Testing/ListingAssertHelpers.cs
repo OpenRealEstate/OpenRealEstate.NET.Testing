@@ -18,6 +18,7 @@ namespace OpenRealEstate.Testing
             source.Id.ShouldBe(destination.Id);
             source.CreatedOn.ShouldBe(destination.CreatedOn);
             source.StatusType.ShouldBe(destination.StatusType);
+            source.SourceStatus.ShouldBe(destination.SourceStatus);
             source.Description.ShouldBe(destination.Description);
             source.Title.ShouldBe(destination.Title);
 
