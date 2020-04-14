@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRealEstate.Core;
@@ -190,7 +190,7 @@ namespace OpenRealEstate.Testing
             }
 
             UnitOfMeasureAssertHelpers.AssertUnitOfMeasure(source.Area, destination.Area);
-            UnitOfMeasureAssertHelpers.AssertUnitOfMeasure(source.Frontage, destination.Frontage);
+            source.Frontage.ShouldBe(destination.Frontage);
             source.CrossOver.ShouldBe(destination.CrossOver);
 
             for (var i = 0; i < destination.Depths.Count; i++)
@@ -209,7 +209,7 @@ namespace OpenRealEstate.Testing
             }
 
             source.Side.ShouldBe(destination.Side);
-            UnitOfMeasureAssertHelpers.AssertUnitOfMeasure(source, destination);
+            source.Value.ShouldBe(destination.Value);
         }
 
         public static void AssertLinks(IList<string> source,
