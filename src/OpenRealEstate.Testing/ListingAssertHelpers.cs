@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using OpenRealEstate.Core;
 using Shouldly;
 
@@ -190,17 +191,16 @@ namespace OpenRealEstate.Testing
             }
 
             UnitOfMeasureAssertHelpers.AssertUnitOfMeasure(source.Area, destination.Area);
-            source.Frontage.ShouldBe(destination.Frontage);
             source.CrossOver.ShouldBe(destination.CrossOver);
 
-            for (var i = 0; i < destination.Depths.Count; i++)
+            for (var i = 0; i < destination.Sides.Count; i++)
             {
-                AssertDepth(source.Depths[i], destination.Depths[i]);
+                AssertSides(source.Sides[i], destination.Sides[i]);
             }
         }
 
-        public static void AssertDepth(Depth source,
-                                       Depth destination)
+        public static void AssertSides(Side source,
+                                       Side destination)
         {
             if (source == null &&
                 destination == null)
@@ -208,8 +208,8 @@ namespace OpenRealEstate.Testing
                 return;
             }
 
-            source.Side.ShouldBe(destination.Side);
-            source.Value.ShouldBe(destination.Value);
+            source.Name.ShouldBe(destination.Name);
+            UnitOfMeasureAssertHelpers.AssertUnitOfMeasure(source.Length, destination.Length);
         }
 
         public static void AssertLinks(IList<string> source,
