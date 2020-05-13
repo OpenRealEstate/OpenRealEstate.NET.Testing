@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net451;netstandard2.0</TargetFrameworks>
     <Version>0.0.0</Version>
     <Authors>Justin Adler</Authors>
     <Company>OpenRealEstate</Company>
@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenRealEstate.FakeData" Version="27.0.0-dev" />
+    <PackageReference Include="OpenRealEstate.FakeData" Version="31.0.0-dev" />
     <PackageReference Include="Shouldly" Version="3.0.2" />
     <PackageReference Include="xunit.core" Version="2.4.1" />
   </ItemGroup>
