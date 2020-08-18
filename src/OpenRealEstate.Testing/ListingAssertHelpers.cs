@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
 using OpenRealEstate.Core;
 using Shouldly;
 
@@ -209,7 +208,7 @@ namespace OpenRealEstate.Testing
             }
 
             source.Name.ShouldBe(destination.Name);
-            UnitOfMeasureAssertHelpers.AssertUnitOfMeasure(source.Length, destination.Length);
+            UnitOfMeasureAssertHelpers.AssertUnitOfMeasure(source, destination);
         }
 
         public static void AssertLinks(IList<string> source,
