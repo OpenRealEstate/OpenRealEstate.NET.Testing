@@ -1,8 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net451;netstandard2.0</TargetFrameworks>
-    <Version>0.0.0</Version>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Justin Adler</Authors>
     <Company>OpenRealEstate</Company>
     <Product>OpenRealEstate - Testing helpers</Product>
@@ -21,8 +20,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenRealEstate.FakeData" Version="32.0.0-dev" />
-    <PackageReference Include="Shouldly" Version="3.0.2" />
+    <PackageReference Include="OpenRealEstate.FakeData" Version="103.0.0-beta" />
+    <PackageReference Include="Shouldly" Version="4.0.3" />
     <PackageReference Include="xunit.core" Version="2.4.1" />
   </ItemGroup>
 
