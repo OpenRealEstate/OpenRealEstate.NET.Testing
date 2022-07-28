@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using OpenRealEstate.Core;
 using OpenRealEstate.Core.Residential;
 using Shouldly;
@@ -27,7 +27,7 @@ namespace OpenRealEstate.Testing
             listing.Id.ShouldBe("Residential-Sold-ABCD1234");
             listing.StatusType.ShouldBe(StatusType.Sold);
 
-            decimal? soldPrice = 580000m;
+            int? soldPrice = 580000;
             listing.Pricing.SoldPrice.ShouldBe(soldPrice);
             listing.Pricing.SoldPriceText.ShouldBe(isSoldPriceVisibile
                                                        ? soldPrice.Value.ToString("C0")
