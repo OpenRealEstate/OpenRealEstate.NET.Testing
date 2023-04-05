@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using OpenRealEstate.Core;
 using OpenRealEstate.Core.Residential;
 using Shouldly;
