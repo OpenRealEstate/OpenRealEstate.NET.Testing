@@ -13,6 +13,8 @@
     <RepositoryUrl>https://github.com/OpenRealEstate/OpenRealEstate.NET.Testing</RepositoryUrl>
     <RepositoryType>c#</RepositoryType>
     <PackageTags>ore ore.net realestate openrealestate testing</PackageTags>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup>
