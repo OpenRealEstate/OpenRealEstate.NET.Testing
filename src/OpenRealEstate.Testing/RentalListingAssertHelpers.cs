@@ -1,12 +1,12 @@
-﻿using OpenRealEstate.Core.Rental;
+using OpenRealEstate.Core.Rental;
 using Shouldly;
 
 namespace OpenRealEstate.Testing
 {
     public static class RentalListingAssertHelpers
     {
-        public static void AssertRuralListing(RentalListing source,
-                                              RentalListing destination)
+        public static void AssertRentalListing(RentalListing source,
+                                               RentalListing destination)
         {
             ListingAssertHelpers.AssertCommonData(source, destination);
             BuildingDetailsAssertHelpers.AssertBuildingDetails(source.BuildingDetails, destination.BuildingDetails);
@@ -29,6 +29,7 @@ namespace OpenRealEstate.Testing
             source.PaymentFrequencyType.ShouldBe(destination.PaymentFrequencyType);
             source.RentalPrice.ShouldBe(destination.RentalPrice);
             source.RentalPriceText.ShouldBe(destination.RentalPriceText);
+            source.HasTakenDeposit.ShouldBe(destination.HasTakenDeposit);
         }
     }
 }

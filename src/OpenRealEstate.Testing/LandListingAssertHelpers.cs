@@ -1,4 +1,4 @@
-﻿using OpenRealEstate.Core.Land;
+using OpenRealEstate.Core.Land;
 using Shouldly;
 
 namespace OpenRealEstate.Testing
@@ -8,13 +8,12 @@ namespace OpenRealEstate.Testing
         public static void AssertLandListing(LandListing source,
                                              LandListing destination)
         {
-            ListingAssertHelpers.AssertCommonData(source, destination);
-            SalePricingAssertHelpers.AssertSalePrice(source.Pricing, destination.Pricing);
-            AssertLandEstate(source.Estate, destination.Estate);
-
-            source.AuctionOn.ShouldBe(destination.AuctionOn);
             source.CategoryType.ShouldBe(destination.CategoryType);
             source.CouncilRates.ShouldBe(destination.CouncilRates);
+
+            ListingAssertHelpers.AssertCommonData(source, destination);
+            SaleDetailsAssertHelpers.AssertSaleDetails(source, destination);
+            AssertLandEstate(source.Estate, destination.Estate);
         }
 
         private static void AssertLandEstate(LandEstate source,

@@ -1,4 +1,4 @@
-﻿using OpenRealEstate.Core.Rural;
+using OpenRealEstate.Core.Rural;
 using Shouldly;
 
 namespace OpenRealEstate.Testing
@@ -10,8 +10,7 @@ namespace OpenRealEstate.Testing
         {
             ListingAssertHelpers.AssertCommonData(source, destination);
             BuildingDetailsAssertHelpers.AssertBuildingDetails(source.BuildingDetails, destination.BuildingDetails);
-
-            source.AuctionOn.ShouldBe(destination.AuctionOn);
+            SaleDetailsAssertHelpers.AssertSaleDetails(source, destination);
         }
     }
 }

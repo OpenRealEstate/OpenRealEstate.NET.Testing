@@ -10,13 +10,11 @@ namespace OpenRealEstate.Testing
         public static void AssertResidentialListing(ResidentialListing source,
                                                     ResidentialListing destination)
         {
-            ListingAssertHelpers.AssertCommonData(source, destination);
-
-            source.AuctionOn.ShouldBe(destination.AuctionOn);
             source.PropertyType.ShouldBe(destination.PropertyType);
             source.CouncilRates.ShouldBe(destination.CouncilRates);
 
-            SalePricingAssertHelpers.AssertSalePrice(source.Pricing, destination.Pricing);
+            ListingAssertHelpers.AssertCommonData(source, destination);
+            SaleDetailsAssertHelpers.AssertSaleDetails(source, destination);
             BuildingDetailsAssertHelpers.AssertBuildingDetails(source.BuildingDetails, destination.BuildingDetails);
         }
 

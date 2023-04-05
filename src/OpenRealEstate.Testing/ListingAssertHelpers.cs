@@ -45,6 +45,8 @@ namespace OpenRealEstate.Testing
             source.ShouldNotBeNull();
             destination.ShouldNotBeNull();
 
+            source.SubNumber.ShouldBe(destination.SubNumber);
+            source.LotNumber.ShouldBe(destination.LotNumber);
             source.StreetNumber.ShouldBe(destination.StreetNumber);
             source.Street.ShouldBe(destination.Street);
             source.Suburb.ShouldBe(destination.Suburb);
