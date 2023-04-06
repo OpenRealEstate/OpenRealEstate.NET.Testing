@@ -19,12 +19,12 @@ namespace OpenRealEstate.Testing
             source.YearLastRenovated.ShouldBe(destination.YearLastRenovated);
             source.Authority.ShouldBe(destination.Authority);
 
-            source.Pricing.SalePrice.ShouldBe(destination.Pricing.SalePrice);
-            source.Pricing.SalePriceText.ShouldBe(destination.Pricing.SalePriceText);
-            source.Pricing.IsUnderOffer.ShouldBe(destination.Pricing.IsUnderOffer);
-            source.Pricing.SoldOn.ShouldBe(destination.Pricing.SoldOn);
-            source.Pricing.SoldPrice.ShouldBe(destination.Pricing.SoldPrice);
-            source.Pricing.SoldPriceText.ShouldBe(destination.Pricing.SoldPriceText);
+            (source.Pricing?.SalePrice ?? null).ShouldBe(destination.Pricing?.SalePrice ?? null);
+            (source.Pricing?.SalePriceText ?? null).ShouldBe(destination.Pricing?.SalePriceText ?? null);
+            (source.Pricing?.IsUnderOffer ?? null).ShouldBe(destination.Pricing?.IsUnderOffer ?? null);
+            (source.Pricing?.SoldOn ?? null).ShouldBe(destination.Pricing?.SoldOn ?? null);
+            (source.Pricing?.SoldPrice ?? null).ShouldBe(destination.Pricing?.SoldPrice ?? null);
+            (source.Pricing?.SoldPriceText ?? null).ShouldBe(destination.Pricing?.SoldPriceText ?? null);
         }
     }
 }
